@@ -7,7 +7,7 @@ var owner = require('./../db-model/owner.model');
 exports.modifyflat = function(req, res){
     Flat.findOneAndUpdate({no: req.params.no},{$set: {mobile: req.body.mobile,carParking: req.body.carParking}},{upsert:true},function(err,flat){
        if(err){
-           res.send("Could not update the record"+err);
+           res.send("Cou    ld not update the record"+err);
        }
        else{
            res.status(204);
